@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deep_reinforcement_learning_solutions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/cart_pole.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/cart_pole_chk.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/dqn_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/dumb_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/smart_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cartpole/train_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/QNetwork.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="SOLVED ADJUSTING REWARD">
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/dqn_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/dumb_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/mountain_car_v0.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/mountain_car_v0_chk.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/smart_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mountain_car_v1/train_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +30,54 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.smart_agent (1)">
+    <configuration name="dumb_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep_reinforcement_learning_solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mountain_car_v1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mountain_car_v1/dumb_agent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="smart_agent (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep_reinforcement_learning_solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mountain_car_v1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mountain_car_v1/smart_agent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="smart_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -63,8 +99,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep_reinforcement_learning_solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mountain_car_v1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mountain_car_v1/train_agent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.smart_agent (1)" />
+        <item itemvalue="Python.train_agent" />
+        <item itemvalue="Python.dumb_agent" />
         <item itemvalue="Python.smart_agent" />
       </list>
     </recent_temporary>
@@ -92,6 +152,109 @@
       <option name="presentableId" value="Default" />
       <updated>1577113087475</updated>
     </task>
+    <task id="LOCAL-00001" summary="Cart pole solution with deepq network.&#10;Solution for perfect score.">
+      <created>1577113218626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577113218626</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cart pole solution with deepq network.&#10;Solution for perfect score." />
+    <MESSAGE value="SOLVED ADJUSTING REWARD" />
+    <option name="LAST_COMMIT_MESSAGE" value="SOLVED ADJUSTING REWARD" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="315" y="24" key="CommitChangelistDialog2" timestamp="1577278945459">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.817@0.23.1440.817" timestamp="1577113218456" />
+    <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1577278945459" />
+    <state width="1402" height="195" key="GridCell.Tab.0.bottom" timestamp="1577278945482">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.817@0.23.1440.817" timestamp="1577113841424" />
+    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1577151494378" />
+    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1577150906072" />
+    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1577117322750" />
+    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1577278945482" />
+    <state width="1402" height="243" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577276295048" />
+    <state width="1402" height="195" key="GridCell.Tab.0.center" timestamp="1577278945481">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.817@0.23.1440.817" timestamp="1577113841423" />
+    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1577151494377" />
+    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1577150906071" />
+    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1577117322749" />
+    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1577278945481" />
+    <state width="1402" height="243" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1577276295048" />
+    <state width="1402" height="195" key="GridCell.Tab.0.left" timestamp="1577278945477">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.817@0.23.1440.817" timestamp="1577113841423" />
+    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1577151494377" />
+    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1577150906071" />
+    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1577117322749" />
+    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1577278945477" />
+    <state width="1402" height="243" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1577276295047" />
+    <state width="1402" height="195" key="GridCell.Tab.0.right" timestamp="1577278945482">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.817@0.23.1440.817" timestamp="1577113841424" />
+    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1577151494378" />
+    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1577150906072" />
+    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1577117322750" />
+    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1577278945482" />
+    <state width="1402" height="243" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1577276295048" />
+    <state width="1402" height="243" key="GridCell.Tab.1.bottom" timestamp="1577276295049">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1577141066163" />
+    <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.824@0.23.1440.824" timestamp="1577116117147" />
+    <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1577114638199" />
+    <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577276295049" />
+    <state width="1402" height="243" key="GridCell.Tab.1.center" timestamp="1577276295049">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1577141066163" />
+    <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.824@0.23.1440.824" timestamp="1577116117147" />
+    <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1577114638191" />
+    <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1577276295049" />
+    <state width="1402" height="243" key="GridCell.Tab.1.left" timestamp="1577276295048">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1577141066163" />
+    <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.824@0.23.1440.824" timestamp="1577116117146" />
+    <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1577114638191" />
+    <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1577276295048" />
+    <state width="1402" height="243" key="GridCell.Tab.1.right" timestamp="1577276295049">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1577141066163" />
+    <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.824@0.23.1440.824" timestamp="1577116117147" />
+    <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1577114638191" />
+    <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1577276295049" />
+    <state x="315" y="161" key="Vcs.Push.Dialog.v2" timestamp="1577113223505">
+      <screen x="0" y="23" width="1440" height="817" />
+    </state>
+    <state x="315" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.817@0.23.1440.817" timestamp="1577113223505" />
+    <state x="392" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1577150014355">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="392" y="253" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1577150014355" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mountain_car_v1/dumb_agent.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
