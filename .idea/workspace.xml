@@ -196,10 +196,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="SOLVED ADJUSTING REWARD" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="315" y="24" key="CommitChangelistDialog2" timestamp="1577278977671">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="315" y="24" key="CommitChangelistDialog2" timestamp="1577315630818">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.817@0.23.1440.817" timestamp="1577113218456" />
+    <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1577315630818" />
     <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1577278977671" />
     <state width="694" height="464" key="DebuggerActiveHint" timestamp="1577288915147">
       <screen x="0" y="23" width="1440" height="823" />
@@ -295,10 +296,11 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="217" y="60" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1577282129348" />
-    <state x="315" y="162" key="Vcs.Push.Dialog.v2" timestamp="1577278979917">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="315" y="162" key="Vcs.Push.Dialog.v2" timestamp="1577315632958">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="315" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.817@0.23.1440.817" timestamp="1577113223505" />
+    <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1577315632958" />
     <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1577278979917" />
     <state x="392" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1577283262011">
       <screen x="0" y="23" width="1440" height="825" />
