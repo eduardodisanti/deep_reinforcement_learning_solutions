@@ -4,7 +4,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from cartpole.dqn_agent import Agent
+from cartpole.dqn_cartpole_agent import Agent
 
 
 env = gym.make('CartPole-v0')

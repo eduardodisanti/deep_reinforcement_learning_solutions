@@ -4,10 +4,10 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from mountain_car_v1.dqn_agent import Agent
+from lunar_lander.dqn_lunar_lander_agent import Agent
 
 
-env = gym.make('MountainCar-v0')
+env = gym.make('LunarLander-v2')
 env.reset()
 
 action_size = env.action_space.n
@@ -25,7 +25,7 @@ UPDATE_EVERY = 4  # how often to update the network
 agent = Agent(state_size=state_size, action_size=action_size, seed=0, gamma=GAMMA, buffer_size=BUFFER_SIZE,
               batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY)
 
-TARGET_AVG_SCORE = -50
+TARGET_AVG_SCORE = 250
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
@@ -39,7 +39,7 @@ def choose_action(state, agent, eps=0.):
 
 trained = False
 episodes = 0
-la = {0: 0, 1: 0, 2:0}
+la = {0: 0, 1: 0, 2:0, 3:0}
 lq = []
 consecutives_solved = 0
 times_solved = 0
@@ -62,8 +62,6 @@ while not trained:
         la[action] += 1
         next_state, reward, done, info = env.step(action)
 
-        if next_state[0]> -0.2:  #### ADJUST THE REWARD FOR FASTEST LEARNING ####
-            reward = 1
         score += reward # update the score
         if done:  # exit loop if episode finished
             break
@@ -83,15 +81,15 @@ while not trained:
         plt.pause(0.1)
         print("act", la)
         print("episodes", episodes, "last score", score, "current eps", eps, "solved", times_solved, "avg", avg)
-        torch.save(agent.qnetwork_local.state_dict(), 'mountain_car_v0_chk.pt')
+        torch.save(agent.qnetwork_local.state_dict(), 'lunar_lander_chk.pt')
 
     if avg > TARGET_AVG_SCORE:
         times_solved += 1
     else:
         consecutives_solved = 0
-    if avg > TARGET_AVG_SCORE:
+    if avg > TARGET_AVG_SCORE or episodes > 10000:
         trained = True
-        torch.save(agent.qnetwork_local.state_dict(), 'mountain_car_v0.pt')
+        torch.save(agent.qnetwork_local.state_dict(), 'lunar_lander.pt')
         print("Trained")
         print("episodes", episodes, "last score", score, "current eps", eps, "solved", times_solved, "avg", avg)
 

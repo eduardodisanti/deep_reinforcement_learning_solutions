@@ -2,9 +2,9 @@ import gym
 import random
 import torch
 
-from mountain_car_v1.dqn_agent import Agent
+from cartpole.dqn_cartpole_agent import Agent
 
-env = gym.make('MountainCar-v0')
+env = gym.make('CartPole-v0')
 env.reset()
 score = 0
 
@@ -16,7 +16,7 @@ def choose_action(state, agent, eps=0.):
 
 agent = Agent()
 
-agent.load_model("mountain_car_v0.pt")
+agent.load_model("cart_pole.pt")
 
 total_score = 0
 for i_episode in range(20):
