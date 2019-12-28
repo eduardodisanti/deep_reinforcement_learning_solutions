@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bipedal_walker/ddpg_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/ActorCritic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auxs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auxs/aux_funcs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_v3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_v3/dqn_taxiv3_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_v3/dumb_taxiv3_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_v3/smart_taxiv3_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_v3/taxi_v3.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_v3/train_taxiv3_agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/dqn_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/dqn_cartpole_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/dumb_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/dumb_cartpole_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/smart_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/smart_cartpole_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/train_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/train_cartpole_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/dqn_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/dqn_lunar_lander_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/dumb_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/dumb_lunar_lander_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander.pt" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander.pt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander_chk.pt" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander_chk.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/smart_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/smart_lunar_lander_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/train_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mountain_car_v1/dqn_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mountain_car_v1/dqn_mountaincar_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mountain_car_v1/dumb_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mountain_car_v1/dumb_mountaincar_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mountain_car_v1/smart_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mountain_car_v1/smart_mountaincar_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mountain_car_v1/train_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mountain_car_v1/train_mountaincar_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/taxi_v3" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -51,31 +47,11 @@
       <recent name="$PROJECT_DIR$/lunar_lander" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/taxi_v3" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dumb_agent (1)">
-    <configuration name="dumb_agent (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deep_reinforcement_learning_solutions" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lunar_lander" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lunar_lander/dumb_lunar_lander_agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.smart_assault_ram_agent">
     <configuration name="smart_agent (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="smart_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="smart_assault_ram_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +81,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bipedal_walker" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assault_ram" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bipedal_walker/smart_agent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assault_ram/smart_assault_ram_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_agent (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="smart_taxiv3_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lunar_lander" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/taxi_v3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/taxi_v3/smart_taxiv3_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_agent (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,11 +123,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bipedal_walker" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assault_ram" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bipedal_walker/train_agent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assault_ram/train_assault_ram_agent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_taxiv3_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep_reinforcement_learning_solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/taxi_v3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/taxi_v3/train_taxiv3_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dumb_agent (1)" />
+        <item itemvalue="Python.smart_assault_ram_agent" />
+        <item itemvalue="Python.train_agent" />
+        <item itemvalue="Python.train_taxiv3_agent" />
+        <item itemvalue="Python.smart_taxiv3_agent" />
         <item itemvalue="Python.smart_agent (1)" />
-        <item itemvalue="Python.train_agent (1)" />
-        <item itemvalue="Python.train_agent (2)" />
-        <item itemvalue="Python.smart_agent" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577315674947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="REFACTOR&#10;- CHANGED NAMES FOR BETTER UNDERSTAINDING">
+      <created>1577523588930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577523588930</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -229,131 +233,134 @@
     <MESSAGE value="SOLVED ADJUSTING REWARD" />
     <MESSAGE value="SOLVED LUNAR LANDER" />
     <MESSAGE value="ADDED LUNAR LANDER MODEL" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADDED LUNAR LANDER MODEL" />
+    <MESSAGE value="REFACTOR&#10;- CHANGED NAMES FOR BETTER UNDERSTAINDING" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR&#10;- CHANGED NAMES FOR BETTER UNDERSTAINDING" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="315" y="24" key="CommitChangelistDialog2" timestamp="1577315674814">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="315" y="24" key="CommitChangelistDialog2" timestamp="1577546220592">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.817@0.23.1440.817" timestamp="1577113218456" />
     <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1577315674814" />
-    <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1577278977671" />
-    <state width="908" height="465" key="DebuggerActiveHint" timestamp="1577440935428">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1577523588794" />
+    <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1577546220592" />
+    <state width="908" height="467" key="DebuggerActiveHint" timestamp="1577534095170">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="921" height="461" key="DebuggerActiveHint/0.23.1440.817@0.23.1440.817" timestamp="1577379541815" />
     <state width="921" height="463" key="DebuggerActiveHint/0.23.1440.821@0.23.1440.821" timestamp="1577366753048" />
     <state width="694" height="464" key="DebuggerActiveHint/0.23.1440.823@0.23.1440.823" timestamp="1577288915147" />
     <state width="921" height="464" key="DebuggerActiveHint/0.23.1440.824@0.23.1440.824" timestamp="1577436378292" />
     <state width="908" height="465" key="DebuggerActiveHint/0.23.1440.825@0.23.1440.825" timestamp="1577440935428" />
+    <state width="908" height="467" key="DebuggerActiveHint/0.23.1440.827@0.23.1440.827" timestamp="1577534095170" />
     <state width="694" height="466" key="DebuggerActiveHint/0.23.1440.828@0.23.1440.828" timestamp="1577279869330" />
-    <state width="1402" height="197" key="GridCell.Tab.0.bottom" timestamp="1577486572350">
-      <screen x="0" y="23" width="1440" height="824" />
+    <state width="1402" height="225" key="GridCell.Tab.0.bottom" timestamp="1577546049279">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1402" height="197" key="GridCell.Tab.0.bottom/0.23.1440.815@0.23.1440.815" timestamp="1577391176483" />
     <state width="1402" height="190" key="GridCell.Tab.0.bottom/0.23.1440.817@0.23.1440.817" timestamp="1577389188390" />
     <state width="1402" height="197" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1577394103039" />
     <state width="1402" height="197" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1577435111458" />
-    <state width="1402" height="197" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1577486572350" />
-    <state width="1402" height="197" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1577444405395" />
-    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577282585448" />
-    <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1577282810446" />
+    <state width="1402" height="225" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1577544714614" />
+    <state width="1402" height="225" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1577544691412" />
+    <state width="1402" height="225" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577546049279" />
+    <state width="1402" height="222" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1577540021243" />
     <state width="1402" height="195" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1577281785303" />
-    <state width="1402" height="197" key="GridCell.Tab.0.center" timestamp="1577486572349">
-      <screen x="0" y="23" width="1440" height="824" />
+    <state width="1402" height="225" key="GridCell.Tab.0.center" timestamp="1577546049279">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1402" height="197" key="GridCell.Tab.0.center/0.23.1440.815@0.23.1440.815" timestamp="1577391176482" />
     <state width="1402" height="190" key="GridCell.Tab.0.center/0.23.1440.817@0.23.1440.817" timestamp="1577389188389" />
     <state width="1402" height="197" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1577394103039" />
     <state width="1402" height="197" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1577435111457" />
-    <state width="1402" height="197" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1577486572349" />
-    <state width="1402" height="197" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1577444405394" />
-    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1577282585448" />
-    <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1577282810446" />
+    <state width="1402" height="225" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1577544714613" />
+    <state width="1402" height="225" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1577544691411" />
+    <state width="1402" height="225" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1577546049279" />
+    <state width="1402" height="222" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1577540021242" />
     <state width="1402" height="195" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1577281785303" />
-    <state width="1402" height="197" key="GridCell.Tab.0.left" timestamp="1577486572349">
-      <screen x="0" y="23" width="1440" height="824" />
+    <state width="1402" height="225" key="GridCell.Tab.0.left" timestamp="1577546049278">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1402" height="197" key="GridCell.Tab.0.left/0.23.1440.815@0.23.1440.815" timestamp="1577391176481" />
     <state width="1402" height="190" key="GridCell.Tab.0.left/0.23.1440.817@0.23.1440.817" timestamp="1577389188389" />
     <state width="1402" height="197" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1577394103038" />
     <state width="1402" height="197" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1577435111457" />
-    <state width="1402" height="197" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1577486572349" />
-    <state width="1402" height="197" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1577444405394" />
-    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1577282585447" />
-    <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1577282810445" />
+    <state width="1402" height="225" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1577544714613" />
+    <state width="1402" height="225" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1577544691411" />
+    <state width="1402" height="225" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1577546049278" />
+    <state width="1402" height="222" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1577540021242" />
     <state width="1402" height="195" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1577281785302" />
-    <state width="1402" height="197" key="GridCell.Tab.0.right" timestamp="1577486572350">
-      <screen x="0" y="23" width="1440" height="824" />
+    <state width="1402" height="225" key="GridCell.Tab.0.right" timestamp="1577546049279">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state width="1402" height="197" key="GridCell.Tab.0.right/0.23.1440.815@0.23.1440.815" timestamp="1577391176482" />
     <state width="1402" height="190" key="GridCell.Tab.0.right/0.23.1440.817@0.23.1440.817" timestamp="1577389188390" />
     <state width="1402" height="197" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1577394103039" />
     <state width="1402" height="197" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1577435111457" />
-    <state width="1402" height="197" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1577486572350" />
-    <state width="1402" height="197" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1577444405395" />
-    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1577282585448" />
-    <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1577282810446" />
+    <state width="1402" height="225" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1577544714614" />
+    <state width="1402" height="225" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1577544691411" />
+    <state width="1402" height="225" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1577546049279" />
+    <state width="1402" height="222" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1577540021243" />
     <state width="1402" height="195" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1577281785303" />
-    <state width="1402" height="190" key="GridCell.Tab.1.bottom" timestamp="1577444380332">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.bottom" timestamp="1577544575826">
+      <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1577384355447" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.823@0.23.1440.823" timestamp="1577434217350" />
-    <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.824@0.23.1440.824" timestamp="1577440910949" />
-    <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1577444380332" />
-    <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577280210404" />
-    <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.828@0.23.1440.828" timestamp="1577279888205" />
+    <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.824@0.23.1440.824" timestamp="1577544575826" />
+    <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1577540161854" />
+    <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577539121976" />
+    <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.828@0.23.1440.828" timestamp="1577539639068" />
     <state width="1402" height="243" key="GridCell.Tab.1.bottom/0.23.1440.829@0.23.1440.829" timestamp="1577281739773" />
-    <state width="1402" height="190" key="GridCell.Tab.1.center" timestamp="1577444380332">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.center" timestamp="1577544575825">
+      <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1577384355446" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.823@0.23.1440.823" timestamp="1577434217349" />
-    <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.824@0.23.1440.824" timestamp="1577440910948" />
-    <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1577444380332" />
-    <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1577280210403" />
-    <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.828@0.23.1440.828" timestamp="1577279888205" />
+    <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.824@0.23.1440.824" timestamp="1577544575825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1577540161854" />
+    <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1577539121976" />
+    <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.828@0.23.1440.828" timestamp="1577539639068" />
     <state width="1402" height="243" key="GridCell.Tab.1.center/0.23.1440.829@0.23.1440.829" timestamp="1577281739773" />
-    <state width="1402" height="190" key="GridCell.Tab.1.left" timestamp="1577444380331">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.left" timestamp="1577544575825">
+      <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1577384355446" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.823@0.23.1440.823" timestamp="1577434217349" />
-    <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.824@0.23.1440.824" timestamp="1577440910948" />
-    <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1577444380331" />
-    <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1577280210403" />
-    <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.828@0.23.1440.828" timestamp="1577279888204" />
+    <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.824@0.23.1440.824" timestamp="1577544575825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1577540161853" />
+    <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1577539121976" />
+    <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.828@0.23.1440.828" timestamp="1577539639067" />
     <state width="1402" height="243" key="GridCell.Tab.1.left/0.23.1440.829@0.23.1440.829" timestamp="1577281739773" />
-    <state width="1402" height="190" key="GridCell.Tab.1.right" timestamp="1577444380332">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.right" timestamp="1577544575825">
+      <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1577384355446" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.823@0.23.1440.823" timestamp="1577434217349" />
-    <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.824@0.23.1440.824" timestamp="1577440910949" />
-    <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1577444380332" />
-    <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1577280210404" />
-    <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.828@0.23.1440.828" timestamp="1577279888205" />
+    <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.824@0.23.1440.824" timestamp="1577544575825" />
+    <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1577540161854" />
+    <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1577539121976" />
+    <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.828@0.23.1440.828" timestamp="1577539639068" />
     <state width="1402" height="243" key="GridCell.Tab.1.right/0.23.1440.829@0.23.1440.829" timestamp="1577281739773" />
     <state x="217" y="60" key="SettingsEditor" timestamp="1577465218476">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="217" y="60" key="SettingsEditor/0.23.1440.824@0.23.1440.824" timestamp="1577465218476" />
     <state x="217" y="60" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1577282129348" />
-    <state x="315" y="162" key="Vcs.Push.Dialog.v2" timestamp="1577315677285">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="315" y="162" key="Vcs.Push.Dialog.v2" timestamp="1577523591017">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="315" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.817@0.23.1440.817" timestamp="1577113223505" />
     <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1577315677285" />
-    <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1577278979917" />
+    <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1577523591017" />
     <state x="392" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1577283262011">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
@@ -367,9 +374,10 @@
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1440.825@0.23.1440.825" timestamp="1577442570751" />
-    <state x="390" y="174" width="670" height="676" key="search.everywhere.popup" timestamp="1577431260149">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="390" y="174" width="670" height="675" key="search.everywhere.popup" timestamp="1577539445752">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
+    <state x="390" y="174" width="670" height="675" key="search.everywhere.popup/0.23.1440.825@0.23.1440.825" timestamp="1577539445752" />
     <state x="390" y="174" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1577431260149" />
   </component>
   <component name="XDebuggerManager">
@@ -381,7 +389,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assault_ram/dumb_agent.py</url>
+          <url>file://$PROJECT_DIR$/assault_ram/dumb_assault_ram_agent.py</url>
           <line>6</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
