@@ -13,4 +13,10 @@ def onehot_encode(i, n):
     v = np.zeros(n)
     v[i] = 1
 
+    #return(np.array([i]))
     return(v)
+
+def choose_action(state, agent, eps=0.):
+    action = agent.act(state, eps=eps)
+
+    return action

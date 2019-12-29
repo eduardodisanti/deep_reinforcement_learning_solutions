@@ -1,3 +1,5 @@
+import time
+import numpy as np
 import gym
 env = gym.make('Assault-ram-v0')
 env = env.unwrapped
@@ -9,15 +11,20 @@ state_size = env.observation_space.shape[0]
 
 print("Action size", action_size, "state size", state_size)
 
+scores = []
 for i_episode in range(20):
     observation = env.reset()
-    for t in range(100):
+    score = 0
+    while True:
         env.render()
         action = env.action_space.sample()
         observation, reward, done, info = env.step(action)
         score+=reward
+        scores.append(score)
         if done:
-            print("Episode finished after {} timesteps".format(t + 1))
+            print("Episode finished {} score".format(score))
+            print("Average score {}".format(np.average(scores)))
             break
+        time.sleep(1 / (20 * (i_episode + 1)))
 env.close()
 print(score)

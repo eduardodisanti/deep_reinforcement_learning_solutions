@@ -4,9 +4,8 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from auxs.aux_funcs import create_action_dict, onehot_encode
-from taxi_v3.dqn_taxiv3_agent import Agent
-
+from auxs.aux_funcs import create_action_dict, onehot_encode, choose_action
+from models.dqn_agent import Agent
 
 env = gym.make('Taxi-v2')
 env.reset()
@@ -17,26 +16,21 @@ state_size = env.observation_space.n
 EPS_START = 1  # START EXPLORING A LOT
 GAMMA = 0.999  # discount factor -
 
-BUFFER_SIZE = int(1e4)  # replay buffer size
+BUFFER_SIZE = int(1e6)  # replay buffer size
 BATCH_SIZE = 64  # minibatch size
 TAU = 1e-3  # for soft update of target parameters
 LR = 5e-4  # learning rate
 UPDATE_EVERY = 4  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=0, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=128, fc2_neurons=128)
 
-TARGET_AVG_SCORE = -205
+TARGET_AVG_SCORE = -201
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
 eps_decay = 0.99995  # DECAY EXPLORE SLOWLY
 best_score = -1e10
-
-def choose_action(state, agent, eps=0.):
-    action = agent.act(state, eps=eps)
-
-    return action
 
 trained = False
 episodes = 0

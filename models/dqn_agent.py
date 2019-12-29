@@ -15,7 +15,7 @@ class Agent():
     """Interacts with and learns from the environment."""
 
     def __init__(self, state_size=2, action_size=3, seed=44, gamma=0.99, buffer_size=64, batch_size=100, tau=0.001,
-                 lr=0.005, update_every=4):
+                 lr=0.005, update_every=4, fc1_neurons=64, fc2_neurons=64):
         """Initialize an Agent object.
 
         Params
@@ -37,8 +37,8 @@ class Agent():
         self.UPDATE_EVERY = update_every
 
         # Q-Network
-        self.qnetwork_local = QNetwork(state_size, action_size, seed,  fc1_neurons=200, fc2_neurons=200).to(device)
-        self.qnetwork_target = QNetwork(state_size, action_size, seed, fc1_neurons=200, fc2_neurons=200).to(device)
+        self.qnetwork_local = QNetwork(state_size, action_size, seed,  fc1_neurons=fc1_neurons, fc2_neurons=fc2_neurons).to(device)
+        self.qnetwork_target = QNetwork(state_size, action_size, seed, fc1_neurons=fc1_neurons, fc2_neurons=fc2_neurons).to(device)
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=self.LR)
 
         # Replay memory
