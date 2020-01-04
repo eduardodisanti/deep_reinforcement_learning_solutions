@@ -1,6 +1,7 @@
 import gym
 
-from lunar_lander.dqn_lunar_lander_agent import Agent
+from auxs.aux_funcs import choose_action
+from models.dqn_agent import Agent
 
 env = gym.make('LunarLander-v2')
 env.reset()
@@ -9,12 +10,7 @@ score = 0
 action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
 
-def choose_action(state, agent, eps=0.):
-    action = agent.act(state, eps=eps)
-
-    return action
-
-agent = Agent(state_size=state_size, action_size=action_size)
+agent = Agent(state_size=state_size, action_size=action_size,  fc1_neurons=200, fc2_neurons=200)
 
 agent.load_model("lunar_lander.pt")
 

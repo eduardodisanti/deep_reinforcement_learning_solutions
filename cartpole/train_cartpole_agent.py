@@ -4,14 +4,14 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from cartpole.dqn_cartpole_agent import Agent
-
+from auxs.aux_funcs import choose_action
+from models.dqn_agent import Agent
 
 env = gym.make('CartPole-v0')
 env.reset()
 
-action_size = 2
-state_size = 4
+action_size = env.action_space.n
+state_size = env.observation_space.shape[0]
 
 EPS_START = 1  # START EXPLORING A LOT
 GAMMA = 0.9999  # discount factor -
@@ -23,19 +23,13 @@ LR = 5e-4  # learning rate
 UPDATE_EVERY = 8  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=0, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=24, fc2_neurons=24)
 
 TARGET_AVG_SCORE = 195
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.0001  # EVEN EXPLORE AFTER MANY EPISODES
 eps_decay = 0.99995  # DECAY EXPLORE SLOWLY
-
-
-def choose_action(state, agent, eps=0.):
-    action = agent.act(state, eps=eps)
-
-    return action
 
 trained = False
 episodes = 0

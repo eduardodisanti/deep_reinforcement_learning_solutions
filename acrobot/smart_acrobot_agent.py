@@ -11,7 +11,7 @@ score = 0
 action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
 
-agent = Agent(state_size=state_size, action_size=action_size, fc1_neurons=32, fc2_neurons=32)
+agent = Agent(state_size=state_size, action_size=action_size, fc1_neurons=128, fc2_neurons=128)
 
 
 agent.load_model("acrobot.pt")

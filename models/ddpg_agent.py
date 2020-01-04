@@ -13,10 +13,14 @@ from models.policy_aux import OUNoise, ReplayBuffer
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-class Agent():
+class ActorCriticAgent():
     """Interacts with and learns from the environment."""
     
     def __init__(self, state_size, action_size, random_seed,
+                    fc1_actor_units=128,
+                    fc2_actor_units=128,
+                    fc1_critic_units = 128,
+                    fc2_critic_units = 128,
                     BUFFER_SIZE=int(1e6),   # replay buffer size,
                     BATCH_SIZE = 128,       # minibatch size
                     GAMMA = 0.99,           # discount factor
@@ -25,7 +29,7 @@ class Agent():
                     LR_CRITIC = 3e-4,       # learning rate of the critic
                     WEIGHT_DECAY = 0.0001,  # L2 weight decay
                     EPSILON = 1,            # EPSILON TO CONTROL NOISE ADDING FOR EXPLORATION
-                    EPSILON_DECAY = 1e-6,   # DECAY RATE OF EPSILON (AND NOISE)
+                    EPSILON_DECAY = 1e-11,  # DECAY RATE OF EPSILON (AND NOISE)
                     MIN_EPSILON   = 1e-10   # MINIMUM EPSILON
                  ):
         """Initialize an Agent object.
@@ -41,13 +45,13 @@ class Agent():
         self.seed = random.seed(random_seed)
 
         # Actor Network (w/ Target Network)
-        self.actor_local = Actor(state_size, action_size, random_seed, fc1_units=600, fc2_units=600).to(device)
-        self.actor_target = Actor(state_size, action_size, random_seed, fc1_units=600, fc2_units=600).to(device)
+        self.actor_local = Actor(state_size, action_size, random_seed, fc1_units=fc1_actor_units, fc2_units=fc2_actor_units).to(device)
+        self.actor_target = Actor(state_size, action_size, random_seed, fc1_units=fc1_actor_units, fc2_units=fc2_actor_units).to(device)
         self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=LR_ACTOR)
 
         # Critic Network (w/ Target Network)
-        self.critic_local = Critic(state_size, action_size, random_seed, fc1_units=600, fc2_units=300).to(device)
-        self.critic_target = Critic(state_size, action_size, random_seed, fc1_units=600, fc2_units=300).to(device)
+        self.critic_local = Critic(state_size, action_size, random_seed, fc1_units=fc1_critic_units, fc2_units=fc2_critic_units).to(device)
+        self.critic_target = Critic(state_size, action_size, random_seed, fc1_units=fc1_critic_units, fc2_units=fc2_critic_units).to(device)
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
 
         # Noise process
@@ -134,9 +138,9 @@ class Agent():
         self.soft_update(self.actor_local, self.actor_target, self.TAU)
 
         # ----------------------- update noise ----------------------- #
-        #self.epsilon -= self.EPSILON_DECAY
-        #if self.epsilon < self.MIN_EPSILON:
-        #    self.epsilon = self.MIN_EPSILON
+        self.epsilon -= self.EPSILON_DECAY
+        if self.epsilon < self.MIN_EPSILON:
+            self.epsilon = self.MIN_EPSILON
 
     def soft_update(self, local_model, target_model, tau):
         """Soft update model parameters.
@@ -151,3 +155,6 @@ class Agent():
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
+    def load_model(self, actor_file, critic_file):
+        self.actor_local.load_state_dict(torch.load(actor_file))
+        self.critic_local.load_state_dict(torch.load(critic_file))

@@ -2,19 +2,18 @@ import gym
 import random
 import torch
 
-from cartpole.dqn_cartpole_agent import Agent
+from auxs.aux_funcs import choose_action
+from models.dqn_agent import Agent
 
 env = gym.make('CartPole-v0')
 env.reset()
 score = 0
 
 
-def choose_action(state, agent, eps=0.):
-    action = agent.act(state, eps=eps)
+action_size = env.action_space.n
+state_size = env.observation_space.shape[0]
 
-    return action
-
-agent = Agent()
+agent = Agent(state_size=state_size, action_size=action_size, seed=0, fc1_neurons=24, fc2_neurons=24)
 
 agent.load_model("cart_pole.pt")
 

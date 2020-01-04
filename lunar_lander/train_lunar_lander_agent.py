@@ -4,8 +4,8 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from lunar_lander.dqn_lunar_lander_agent import Agent
-
+from auxs.aux_funcs import choose_action
+from models.dqn_agent import Agent
 
 env = gym.make('LunarLander-v2')
 env.reset()
@@ -16,26 +16,21 @@ state_size = env.observation_space.shape[0]
 EPS_START = 1  # START EXPLORING A LOT
 GAMMA = 0.999  # discount factor -
 
-BUFFER_SIZE = int(1e4)  # replay buffer size
+BUFFER_SIZE = int(1e3)  # replay buffer size
 BATCH_SIZE = 64  # minibatch size
 TAU = 1e-3  # for soft update of target parameters
 LR = 5e-4  # learning rate
 UPDATE_EVERY = 4  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=1, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY,  fc1_neurons=200, fc2_neurons=200)
 
 TARGET_AVG_SCORE = 210
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
-eps_decay = 0.999995  # DECAY EXPLORE SLOWLY
+eps_decay = 0.99995  # DECAY EXPLORE SLOWLY
 best_score = -1e10
-
-def choose_action(state, agent, eps=0.):
-    action = agent.act(state, eps=eps)
-
-    return action
 
 trained = False
 episodes = 0
@@ -77,12 +72,13 @@ while not trained:
     avgs.append(avg)
 
     if (len(avgs)%10) == 0:
-        plt.plot(avgs, c="b")
+        plt.plot(avgs, ".", c="b")
         plt.pause(0.1)
         print("act", la)
-        print("episodes", episodes, "last score", score, "current eps", eps, "solved", times_solved, "avg", avg)
+        print("episodes", episodes, "last score", score, "current eps", eps, "solved", times_solved, "avg", avg, "best", best_score)
         if avg > best_score:
             torch.save(agent.qnetwork_local.state_dict(), 'lunar_lander.pt')
+            best_score = avg
 
     if avg > TARGET_AVG_SCORE:
         times_solved += 1

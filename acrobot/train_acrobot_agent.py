@@ -16,22 +16,22 @@ action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
 
 EPS_START = 1  # START EXPLORING A LOT
-GAMMA = 0.9999  # discount factor -
+GAMMA = 0.999  # discount factor -
 
-BUFFER_SIZE = int(1e5)  # replay buffer size
+BUFFER_SIZE = int(1e7)  # replay buffer size
 BATCH_SIZE = 64  # minibatch size
 TAU = 1e-3  # for soft update of target parameters
-LR = 5e-4  # learning rate
+LR = 5e-3  # learning rate
 UPDATE_EVERY = 4  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=1, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=32, fc2_neurons=32)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=64, fc2_neurons=64)
 
-TARGET_AVG_SCORE = -50
+TARGET_AVG_SCORE = -99
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
-eps_decay = 0.99995  # DECAY EXPLORE SLOWLY
+eps_decay = 0.999995  # DECAY EXPLORE SLOWLY
 best_score = -1e10
 
 trained = False
@@ -46,8 +46,8 @@ avgs = []
 mavgs = []
 
 scores = []
-SHOW_TRAIN = 10001
-train_show_window = 10
+SHOW_TRAIN = 50
+train_show_window = 50
 
 eps = EPS_START
 
