@@ -1,7 +1,7 @@
 import gym
 import numpy as np
 
-from models.ddpg_agent import Agent
+from models.a3c_agent import Agent
 
 env = gym.make('BipedalWalker-v2')
 env.reset()

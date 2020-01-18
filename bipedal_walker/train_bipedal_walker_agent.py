@@ -7,7 +7,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from models.ddpg_agent import ActorCriticAgent
+from models.ddpgagent import DDPGAgent
 
 env = gym.make('BipedalWalker-v2')
 env.reset()
@@ -20,9 +20,9 @@ MAX_T           = 1000
 TARGET_SCORE    = 300.0
 TARGET_EPISODES = 100
 
-SHOW_TRAIN = 6300
+SHOW_TRAIN = 100
 
-agent = ActorCriticAgent(state_size=state_size, action_size=action_size, random_seed=1, EPSILON_DECAY = 0,
+agent = DDPGAgent(state_size=state_size, action_size=action_size, random_seed=1,
                          fc1_actor_units=600,
                          fc2_actor_units=600,
                          fc1_critic_units=600,
@@ -34,10 +34,10 @@ critic_path= "bipedal_critic.pt"
 episode_ist = 1
 best_score = -1e10
 
-if os.path.isfile(actor_path) and os.path.isfile(critic_path):
-    agent.load_model(actor_path, critic_path)
-    episode_ist = SHOW_TRAIN
-    best_score = -110.0
+#if os.path.isfile(actor_path) and os.path.isfile(critic_path):
+#    agent.load_model(actor_path, critic_path)
+#    episode_ist = SHOW_TRAIN
+#    best_score = -110.0
 
 train_mode = True
 scoresDQ = deque(maxlen=TARGET_EPISODES)  # mean scores of n most recent episodes (n=target_episodes)
@@ -78,7 +78,7 @@ while True:
 
         # save experience to replay buffer, perform learning step at defined interval
         for state, action, reward, next_state, done in zip(states, actions, rewards, next_states, dones):
-            agent.step(state, action, reward, next_state, done)
+            agent.step(state, action, reward, next_state, done, t)
         states = next_states
         agents_score += rewards
 
