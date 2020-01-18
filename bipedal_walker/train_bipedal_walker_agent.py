@@ -7,7 +7,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from models.ddpg_agent import ActorCriticAgent
+from models.a3c_agent import ActorCriticAgent
 
 env = gym.make('BipedalWalker-v2')
 env.reset()

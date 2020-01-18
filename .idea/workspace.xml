@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/saves/bipedal_actor.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/bipedal_critic.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acrobot/acrobot.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/acrobot/smart_acrobot_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/acrobot/smart_acrobot_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acrobot/train_acrobot_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/acrobot/train_acrobot_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxs/aux_funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/auxs/aux_funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bipedal_walker/bipedal_actor.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bipedal_walker/bipedal_critic.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/acrobot/temp/smart_bipedal_walker_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/acrobot/temp/smart_bipedal_walker_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bipedal_walker/smart_bipedal_walker_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/bipedal_walker/smart_bipedal_walker_agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bipedal_walker/train_bipedal_walker_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/bipedal_walker/train_bipedal_walker_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/cart_pole.pt" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/cart_pole.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/cart_pole_chk.pt" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/cart_pole_chk.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/dqn_cartpole_agent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/smart_cartpole_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/smart_cartpole_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartpole/train_cartpole_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartpole/train_cartpole_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/dqn_lunar_lander_agent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander.pt" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/smart_lunar_lander_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/smart_lunar_lander_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ddpg_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ddpg_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mountain_car_v1/dqn_mountaincar_agent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mountain_car_v1/train_mountaincar_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/mountain_car_v1/train_mountaincar_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ddpg_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/a3c_agent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/acrobot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -457,9 +439,10 @@
     <state x="208" y="87" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1577546304459" />
     <state x="208" y="87" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1577637884540" />
     <state x="208" y="87" key="Vcs.Push.Dialog.v2/0.23.1440.836@0.23.1440.836" timestamp="1577973818140" />
-    <state x="392" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1577283262011">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="348" y="227" key="com.intellij.ide.util.TipDialog" timestamp="1579373376198">
+      <screen x="0" y="23" width="1280" height="732" />
     </state>
+    <state x="348" y="227" key="com.intellij.ide.util.TipDialog/0.23.1280.732@0.23.1280.732" timestamp="1579373376198" />
     <state x="392" y="253" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1577150014355" />
     <state x="392" y="253" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1577283262011" />
     <state x="387" y="56" width="683" height="714" key="find.popup" timestamp="1577433897902">
