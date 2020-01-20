@@ -146,6 +146,9 @@ class DDPGAgent():
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau * local_param.data + (1.0 - tau) * target_param.data)
 
+    def load_model(self, actor_file, critic_file):
+        self.actor_local.load_state_dict(torch.load(actor_file))
+        self.critic_local.load_state_dict(torch.load(critic_file))
 
 class OUNoise:
     """Ornstein-Uhlenbeck process."""

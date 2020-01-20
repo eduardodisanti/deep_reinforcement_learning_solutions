@@ -15,17 +15,17 @@ env.reset()
 action_size = env.action_space.shape[0]
 state_size = env.observation_space.shape[0]
 
-N_EPISODES      = 500
+N_EPISODES      = 1000
 MAX_T           = 1000
 TARGET_SCORE    = 300.0
 TARGET_EPISODES = 100
 
-SHOW_TRAIN = 100
+SHOW_TRAIN = 20
 
 agent = DDPGAgent(state_size=state_size, action_size=action_size, random_seed=1,
-                         fc1_actor_units=600,
-                         fc2_actor_units=600,
-                         fc1_critic_units=600,
+                         fc1_actor_units=300,
+                         fc2_actor_units=300,
+                         fc1_critic_units=300,
                          fc2_critic_units=300)
 
 actor_path = "bipedal_actor.pt"
@@ -34,16 +34,16 @@ critic_path= "bipedal_critic.pt"
 episode_ist = 1
 best_score = -1e10
 
-#if os.path.isfile(actor_path) and os.path.isfile(critic_path):
-#    agent.load_model(actor_path, critic_path)
-#    episode_ist = SHOW_TRAIN
-#    best_score = -110.0
+if os.path.isfile(actor_path) and os.path.isfile(critic_path):
+    agent.load_model(actor_path, critic_path)
+    episode_ist = SHOW_TRAIN
+    best_score = -110.0
 
 train_mode = True
 scoresDQ = deque(maxlen=TARGET_EPISODES)  # mean scores of n most recent episodes (n=target_episodes)
 avgs = []
 
-train_show_window = 20
+train_show_window = 10
 t = 0
 state = env.reset()  # reset environment
 states = np.array([state])  # TRANSFORM IN A LIST BECAUSE THE DDPG AGENT WAS IMPLEMENTED FOR MULTI AGENT TRAINING #
