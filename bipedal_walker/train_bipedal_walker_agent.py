@@ -42,6 +42,7 @@ if os.path.isfile(actor_path) and os.path.isfile(critic_path):
 train_mode = True
 scoresDQ = deque(maxlen=TARGET_EPISODES)  # mean scores of n most recent episodes (n=target_episodes)
 avgs = []
+lscores = []
 
 train_show_window = 10
 t = 0
@@ -87,14 +88,16 @@ while True:
             t = 0
             scoresDQ.append(np.mean(agents_score))
             avgs.append(np.average(scoresDQ))
+            lscores.append(np.mean(agents_score))
 
             state = env.reset()  # reset environment
             states = np.array([state])  # TRANSFORM IN A LIST BECAUSE THE DDPG AGENT WAS IMPLEMENTED FOR MULTI AGENT TRAINING #
             agents_score = np.zeros(1)  # initialize score for the agent
             agent.reset()
             if episode_ist < SHOW_TRAIN:
-                plt.plot(avgs, ".", c="b")
-                plt.pause(0.1)
+                plt.plot(avgs, c="b")
+                plt.plot(lscores, ".", c="r")
+                plt.pause(0.3)
 
             episode_ist += 1
             print("Episode", episode_ist, "average on deque", np.average(scoresDQ), "epsilon", agent.epsilon)

@@ -21,7 +21,7 @@ LEARN_NUM = 10  # number of learning passes
 OU_SIGMA = 0.2  # Ornstein-Uhlenbeck noise parameter
 OU_THETA = 0.15  # Ornstein-Uhlenbeck noise parameter
 EPSILON = 1.0  # explore->exploit noise process added to act step
-EPSILON_DECAY = 1e-6  # decay rate for noise process
+EPSILON_DECAY = 1e-5  # decay rate for noise process
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -54,8 +54,8 @@ class DDPGAgent():
 
         ### DEFINE THE CRITIC NETWORK ###
         ### ONE STEP BOOTSRAPPING, THEREFORE HIGH BIAS ###
-        self.critic_local = Critic(state_size, action_size, random_seed, fc1_units=fc2_critic_units, fc2_units=fc2_critic_units).to(device)
-        self.critic_target = Critic(state_size, action_size, random_seed, fc1_units=fc2_critic_units, fc2_units=fc2_critic_units).to(device)
+        self.critic_local = Critic(state_size, action_size, random_seed, fc1_units=fc1_critic_units, fc2_units=fc2_critic_units).to(device)
+        self.critic_target = Critic(state_size, action_size, random_seed, fc1_units=fc1_critic_units, fc2_units=fc2_critic_units).to(device)
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
 
         ### PROCCESS TO CREATE NOISE ###
@@ -132,6 +132,8 @@ class DDPGAgent():
 
         # ---------------------------- update noise ---------------------------- #
         self.epsilon -= EPSILON_DECAY
+        if self.epsilon <= 0:
+            self.epsilon = 0
         self.noise.reset()
 
     def soft_update(self, local_model, target_model, tau):
