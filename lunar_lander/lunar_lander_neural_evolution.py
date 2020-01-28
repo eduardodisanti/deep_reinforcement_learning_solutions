@@ -85,7 +85,7 @@ def evolution_strategy(
             consecutively_solved = 0
 
         if consecutively_solved >= target_episodes:
-            trained = False
+            trained = True
         t += 1
 
     return params, reward_per_iteration
@@ -132,7 +132,7 @@ if __name__ == '__main__':
         lr=0.03,
         initial_params=params,
         generations=generations,
-        target_score = 200,
+        target_score = 260,
         target_episodes = 10
     )
 
