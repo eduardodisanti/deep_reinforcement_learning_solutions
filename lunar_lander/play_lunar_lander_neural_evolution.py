@@ -23,5 +23,5 @@ for t in range(20):
         action = np.argmax(action)
         state, reward, done, _ = env.step(action)
         score+=reward
-        #env.render()
+        env.render()
     print("Game", t, "reward", score)

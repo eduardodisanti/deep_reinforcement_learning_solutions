@@ -40,7 +40,9 @@ def evolution_strategy(
         sigma,
         lr,
         initial_params,
-        generations):
+        generations,
+        target_score=200,
+        target_episodes=10):
     # assume initial params is a 1-D array
     num_params = len(initial_params)
     reward_per_iteration = np.zeros(generations)
@@ -48,8 +50,8 @@ def evolution_strategy(
     params = initial_params
     t = 0
     trained = False
+    consecutively_solved = 0
     while not trained:
-        t+=1
         t0 = datetime.now()
         N = np.random.randn(population_size, num_params)
 
@@ -72,10 +74,19 @@ def evolution_strategy(
         # lr *= 0.992354
         # sigma *= 0.99
 
-        print("Episode:", t, "avg: %.4f" % m, "max avg:", R.max(), "time:", (datetime.now() - t0))
+        print("Episode:", t, "avg: %.4f" % m, "max:", R.max(), "time:", (datetime.now() - t0))
         model = get_NN()
         model.set_params(params)
         save_model_params(model, R.max(), t)
+
+        if m >= target_score:
+            consecutively_solved += 1
+        else:
+            consecutively_solved = 0
+
+        if consecutively_solved >= target_episodes:
+            trained = False
+        t += 1
 
     return params, reward_per_iteration
 
@@ -121,6 +132,8 @@ if __name__ == '__main__':
         lr=0.03,
         initial_params=params,
         generations=generations,
+        target_score = 200,
+        target_episodes = 10
     )
 
     model.set_params(best_params)
