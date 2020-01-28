@@ -10,7 +10,7 @@ score = 0
 action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
 
-agent = Agent(state_size=state_size, action_size=action_size,  fc1_neurons=200, fc2_neurons=200)
+agent = Agent(state_size=state_size, action_size=action_size,  fc1_neurons=64, fc2_neurons=64)
 
 agent.load_model("lunar_lander.pt")
 
