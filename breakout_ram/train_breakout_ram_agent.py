@@ -42,7 +42,7 @@ agent = Agent(state_size=state_size, action_size=action_size, seed=0, gamma=GAMM
 TARGET_AVG_SCORE = 10
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
-SHOW_TRAIN = 2000
+SHOW_TRAIN = 100000
 trained = False
 episodes = 0
 la = create_action_dict(action_size)

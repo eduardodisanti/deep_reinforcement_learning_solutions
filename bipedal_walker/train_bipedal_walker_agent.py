@@ -14,19 +14,20 @@ env.reset()
 
 action_size = env.action_space.shape[0]
 state_size = env.observation_space.shape[0]
+print("State size", state_size)
 
 N_EPISODES      = 1000
 MAX_T           = 1000
 TARGET_SCORE    = 300.0
 TARGET_EPISODES = 100
 
-SHOW_TRAIN = 20
+SHOW_TRAIN = 20000
 
 agent = DDPGAgent(state_size=state_size, action_size=action_size, random_seed=1,
-                         fc1_actor_units=300,
-                         fc2_actor_units=300,
-                         fc1_critic_units=300,
-                         fc2_critic_units=300)
+                         fc1_actor_units =128,
+                         fc2_actor_units =128,
+                         fc1_critic_units=128,
+                         fc2_critic_units=128)
 
 actor_path = "bipedal_actor.pt"
 critic_path= "bipedal_critic.pt"
@@ -36,8 +37,6 @@ best_score = -1e10
 
 if os.path.isfile(actor_path) and os.path.isfile(critic_path):
     agent.load_model(actor_path, critic_path)
-    episode_ist = SHOW_TRAIN
-    best_score = -110.0
 
 train_mode = True
 scoresDQ = deque(maxlen=TARGET_EPISODES)  # mean scores of n most recent episodes (n=target_episodes)
@@ -95,8 +94,9 @@ while True:
             agents_score = np.zeros(1)  # initialize score for the agent
             agent.reset()
             if episode_ist < SHOW_TRAIN:
-                plt.plot(avgs, c="b")
-                plt.plot(lscores, ".", c="r")
+                plt.title("BW ")
+                plt.plot(avgs, c="r")
+                plt.plot(lscores, ".")
                 plt.pause(0.3)
 
             episode_ist += 1

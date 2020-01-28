@@ -12,6 +12,7 @@ env.reset()
 
 action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
+print("State size", state_size)
 
 EPS_START = 1  # START EXPLORING A LOT
 GAMMA = 0.999  # discount factor -
@@ -23,9 +24,9 @@ LR = 5e-4  # learning rate
 UPDATE_EVERY = 4  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=1, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY,  fc1_neurons=200, fc2_neurons=200)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY,  fc1_neurons=64, fc2_neurons=64)
 
-TARGET_AVG_SCORE = 210
+TARGET_AVG_SCORE = 200
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
@@ -71,8 +72,9 @@ while not trained:
     avg = np.average(lq[-NUM_OF_TARGET_EPISODES_FOR_AVG:])
     avgs.append(avg)
 
-    if (len(avgs)%10) == 0:
-        plt.plot(avgs, ".", c="b")
+    if (len(avgs)%50) == 0:
+        plt.plot(lq, "x")
+        plt.plot(avgs, c="r")
         plt.pause(0.1)
         print("act", la)
         print("episodes", episodes, "last score", score, "current eps", eps, "solved", times_solved, "avg", avg, "best", best_score)
