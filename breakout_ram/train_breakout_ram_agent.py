@@ -11,10 +11,7 @@ from env_wrappers.atari_wrappers import make_atari, Monitor, wrap_deepmindRAM
 from models.dqn_agent import Agent
 from auxs.aux_funcs import create_action_dict, choose_action
 
-
-#env = gym.make('Breakout-ram-v0')
-
-env = make_atari('Breakout-ram-v0', skip=1)
+env = make_atari('Breakout-ram-v0', skip=4)
 env = wrap_deepmindRAM(env, frame_stack=False, clip_rewards=True, episode_life=True)
 env = Monitor(env)
 
@@ -28,16 +25,16 @@ print("state size", state_size)
 EPS_START = 1           # START EXPLORING A LOT
 GAMMA = 0.1             # discount factor -
 
-BUFFER_SIZE = int(1e2)  # replay buffer size
-BATCH_SIZE = 128         # minibatch size
-TAU = 1e-2              # for soft update of target parameters
+BUFFER_SIZE = int(1e6)  # replay buffer size
+BATCH_SIZE = 64         # minibatch size
+TAU = 1e-4              # for soft update of target parameters
 LR = 7e-4               # learning rate
 UPDATE_EVERY = 5        # how often to update the network
 eps_min = 0.0005        # NOT EXPLORE MUCH AFTER DECAY
 eps_decay = 0.99995       # DECAY EXPLORE SLOWLY
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=0, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=1024, fc2_neurons=1024)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=512, fc2_neurons=512)
 
 TARGET_AVG_SCORE = 10
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
@@ -54,7 +51,7 @@ mav = 0
 avgs = deque(maxlen=1000)
 mavgs = deque(maxlen=1000)
 
-scores = deque(maxlen=1000)
+scores = deque(maxlen=5000)
 
 eps = EPS_START
 

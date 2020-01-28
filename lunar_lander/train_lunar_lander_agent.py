@@ -14,21 +14,21 @@ action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
 
 EPS_START = 1  # START EXPLORING A LOT
-GAMMA = 0.999  # discount factor -
+GAMMA = 0.9999  # discount factor -
 
-BUFFER_SIZE = int(1e3)  # replay buffer size
+BUFFER_SIZE = int(1e4)  # replay buffer size
 BATCH_SIZE = 64  # minibatch size
 TAU = 1e-3  # for soft update of target parameters
 LR = 5e-4  # learning rate
 UPDATE_EVERY = 4  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=1, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY,  fc1_neurons=200, fc2_neurons=200)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY,  fc1_neurons=16, fc2_neurons=16)
 
-TARGET_AVG_SCORE = 210
+TARGET_AVG_SCORE = 160
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
-eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
+eps_min = 0.0001  # EVEN EXPLORE AFTER MANY EPISODES
 eps_decay = 0.99995  # DECAY EXPLORE SLOWLY
 best_score = -1e10
 
@@ -57,8 +57,9 @@ while not trained:
         la[action] += 1
         next_state, reward, done, info = env.step(action)
 
-        score += reward # update the score
+        score += reward  # update the score
         if done:  # exit loop if episode finished
+            #score += reward  # update the score
             break
 
         agent.step(state, action, reward, next_state, done)
@@ -84,7 +85,7 @@ while not trained:
         times_solved += 1
     else:
         consecutives_solved = 0
-    if avg > TARGET_AVG_SCORE or episodes > 10000:
+    if avg > TARGET_AVG_SCORE or episodes > 20000:
         trained = True
         if avg > best_score:
             torch.save(agent.qnetwork_local.state_dict(), 'lunar_lander.pt')

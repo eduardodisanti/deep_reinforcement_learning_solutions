@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/env_wrappers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env_wrappers/atari_wrappers.py" afterDir="false" />
+    <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="ADD&#10;-- ATARI WRAPPERS FOR OPEN AI GYM">
+      <change afterPath="$PROJECT_DIR$/breakout_ram/train_breakout_Q_multi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/breakout_ram/trainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/breakout_ram/breakout_ram.pt" beforeDir="false" afterPath="$PROJECT_DIR$/breakout_ram/breakout_ram.pt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/breakout_ram/train_breakout_ram_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/breakout_ram/train_breakout_ram_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/breakout_ram/train_breakout_ram_ddpg_agent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander.pt" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,7 @@
       <recent name="$PROJECT_DIR$/breakout_ram" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train_breakout_ram_agent">
+  <component name="RunManager" selected="Python.train_lunar_lander_agent">
     <configuration name="dumb_lunar_lander_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,48 +69,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lunar_lander/dumb_lunar_lander_agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="smart_assault_ram_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deep_reinforcement_learning_solutions" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assault_ram" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assault_ram/smart_assault_ram_agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="smart_cartpole_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deep_reinforcement_learning_solutions" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cartpole" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cartpole/smart_cartpole_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,6 +98,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_breakout_Q_multi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep_reinforcement_learning_solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/breakout_ram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/breakout_ram/train_breakout_Q_multi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train_breakout_ram_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,13 +140,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_lunar_lander_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deep_reinforcement_learning_solutions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lunar_lander" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train_breakout_ram_agent" />
-        <item itemvalue="Python.smart_assault_ram_agent" />
+        <item itemvalue="Python.train_lunar_lander_agent" />
+        <item itemvalue="Python.train_breakout_Q_multi" />
         <item itemvalue="Python.smart_lunar_lander_agent" />
         <item itemvalue="Python.dumb_lunar_lander_agent" />
-        <item itemvalue="Python.smart_cartpole_agent" />
+        <item itemvalue="Python.train_breakout_ram_agent" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579815658570</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ADD&#10;-- ATARI WRAPPERS FOR OPEN AI GYM">
+      <created>1579977031749</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579977031749</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -283,11 +293,12 @@
     <MESSAGE value="ADD&#10;--- ACROBOT solution" />
     <MESSAGE value="RENAME A2C agent" />
     <MESSAGE value="ADD DDPG AGENT AND USE ON BIPEDAL WALKER" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD DDPG AGENT AND USE ON BIPEDAL WALKER" />
+    <MESSAGE value="ADD&#10;-- ATARI WRAPPERS FOR OPEN AI GYM" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD&#10;-- ATARI WRAPPERS FOR OPEN AI GYM" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1982" y="86" key="CommitChangelistDialog2" timestamp="1579815658385">
-      <screen x="1920" y="86" width="1440" height="877" />
+    <state x="899" y="77" key="CommitChangelistDialog2" timestamp="1580031799984">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="55" y="23" key="CommitChangelistDialog2/0.23.1280.732@0.23.1280.732" timestamp="1579373829245" />
     <state x="55" y="23" key="CommitChangelistDialog2/0.23.1280.736@0.23.1280.736" timestamp="1579543997663" />
@@ -298,8 +309,10 @@
     <state x="62" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1577637881899" />
     <state x="62" y="23" key="CommitChangelistDialog2/0.23.1440.836@0.23.1440.836" timestamp="1577973816258" />
     <state x="1982" y="86" key="CommitChangelistDialog2/1920.86.1440.877/0.23.1920.992@1920.86.1440.877" timestamp="1579815658385" />
-    <state width="1211" height="561" key="DebuggerActiveHint" timestamp="1579969216698">
-      <screen x="0" y="23" width="1920" height="992" />
+    <state x="899" y="77" key="CommitChangelistDialog2/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579977031215" />
+    <state x="899" y="77" key="CommitChangelistDialog2/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580031799984" />
+    <state width="1396" height="564" key="DebuggerActiveHint" timestamp="1580047875752">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state width="921" height="461" key="DebuggerActiveHint/0.23.1440.817@0.23.1440.817" timestamp="1577379541815" />
     <state width="921" height="463" key="DebuggerActiveHint/0.23.1440.821@0.23.1440.821" timestamp="1577366753048" />
@@ -309,8 +322,9 @@
     <state width="908" height="467" key="DebuggerActiveHint/0.23.1440.827@0.23.1440.827" timestamp="1577534095170" />
     <state width="694" height="466" key="DebuggerActiveHint/0.23.1440.828@0.23.1440.828" timestamp="1577279869330" />
     <state width="1211" height="561" key="DebuggerActiveHint/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579969216698" />
-    <state width="1532" height="185" key="GridCell.Tab.0.bottom" timestamp="1579976850064">
-      <screen x="0" y="23" width="1920" height="992" />
+    <state width="1396" height="564" key="DebuggerActiveHint/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580047875752" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom" timestamp="1580170814071">
+      <screen x="0" y="23" width="1920" height="1004" />
     </state>
     <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1579374141120" />
     <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.23.1280.734@0.23.1280.734" timestamp="1579375434360" />
@@ -334,13 +348,19 @@
     <state width="1363" height="191" key="GridCell.Tab.0.bottom/0.23.1440.835@0.23.1440.835" timestamp="1578087144283" />
     <state width="1363" height="191" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1578128595170" />
     <state width="885" height="191" key="GridCell.Tab.0.bottom/0.23.1920.992@0.23.1920.992" timestamp="1579806411554" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1580163422304" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.1003@0.23.1920.1003" timestamp="1580170524327" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.1004@0.23.1920.1004" timestamp="1580170814071" />
     <state width="1532" height="185" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579976850064" />
     <state width="885" height="191" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.992@1920.86.1440.877" timestamp="1579815544614" />
-    <state width="986" height="185" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715285" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1580078797979" />
     <state width="885" height="191" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362030" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580079856245" />
     <state width="885" height="191" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003321" />
-    <state width="1532" height="185" key="GridCell.Tab.0.center" timestamp="1579976850064">
-      <screen x="0" y="23" width="1920" height="992" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.996@0.23.1920.996" timestamp="1580068996742" />
+    <state width="1535" height="213" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580077610045" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center" timestamp="1580170814070">
+      <screen x="0" y="23" width="1920" height="1004" />
     </state>
     <state width="1239" height="162" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1579374141117" />
     <state width="1239" height="162" key="GridCell.Tab.0.center/0.23.1280.734@0.23.1280.734" timestamp="1579375434358" />
@@ -364,13 +384,19 @@
     <state width="1363" height="191" key="GridCell.Tab.0.center/0.23.1440.835@0.23.1440.835" timestamp="1578087144282" />
     <state width="1363" height="191" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1578128595169" />
     <state width="885" height="191" key="GridCell.Tab.0.center/0.23.1920.992@0.23.1920.992" timestamp="1579806411554" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1580163422303" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.1003@0.23.1920.1003" timestamp="1580170524326" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.1004@0.23.1920.1004" timestamp="1580170814070" />
     <state width="1532" height="185" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579976850064" />
     <state width="885" height="191" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.992@1920.86.1440.877" timestamp="1579815544613" />
-    <state width="986" height="185" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715284" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1580078797978" />
     <state width="885" height="191" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362029" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580079856244" />
     <state width="885" height="191" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003321" />
-    <state width="1532" height="185" key="GridCell.Tab.0.left" timestamp="1579976850063">
-      <screen x="0" y="23" width="1920" height="992" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.996@0.23.1920.996" timestamp="1580068996741" />
+    <state width="1535" height="213" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580077610044" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left" timestamp="1580170814069">
+      <screen x="0" y="23" width="1920" height="1004" />
     </state>
     <state width="1239" height="162" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1579374141115" />
     <state width="1239" height="162" key="GridCell.Tab.0.left/0.23.1280.734@0.23.1280.734" timestamp="1579375434358" />
@@ -394,13 +420,19 @@
     <state width="1363" height="191" key="GridCell.Tab.0.left/0.23.1440.835@0.23.1440.835" timestamp="1578087144282" />
     <state width="1363" height="191" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1578128595169" />
     <state width="885" height="191" key="GridCell.Tab.0.left/0.23.1920.992@0.23.1920.992" timestamp="1579806411553" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1580163422303" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.1003@0.23.1920.1003" timestamp="1580170524326" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.1004@0.23.1920.1004" timestamp="1580170814069" />
     <state width="1532" height="185" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579976850063" />
     <state width="885" height="191" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.992@1920.86.1440.877" timestamp="1579815544612" />
-    <state width="986" height="185" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715284" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1580078797978" />
     <state width="885" height="191" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362029" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580079856244" />
     <state width="885" height="191" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003320" />
-    <state width="1532" height="185" key="GridCell.Tab.0.right" timestamp="1579976850064">
-      <screen x="0" y="23" width="1920" height="992" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.996@0.23.1920.996" timestamp="1580068996740" />
+    <state width="1535" height="213" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580077610043" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right" timestamp="1580170814070">
+      <screen x="0" y="23" width="1920" height="1004" />
     </state>
     <state width="1239" height="162" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1579374141119" />
     <state width="1239" height="162" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1579375434359" />
@@ -424,13 +456,19 @@
     <state width="1363" height="191" key="GridCell.Tab.0.right/0.23.1440.835@0.23.1440.835" timestamp="1578087144283" />
     <state width="1363" height="191" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1578128595169" />
     <state width="885" height="191" key="GridCell.Tab.0.right/0.23.1920.992@0.23.1920.992" timestamp="1579806411554" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1580163422304" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.1003@0.23.1920.1003" timestamp="1580170524326" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.1004@0.23.1920.1004" timestamp="1580170814070" />
     <state width="1532" height="185" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579976850064" />
     <state width="885" height="191" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.992@1920.86.1440.877" timestamp="1579815544614" />
-    <state width="986" height="185" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715285" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1580078797979" />
     <state width="885" height="191" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362030" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580079856245" />
     <state width="885" height="191" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003321" />
-    <state width="765" height="220" key="GridCell.Tab.1.bottom" timestamp="1579972124076">
-      <screen x="0" y="23" width="1920" height="993" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.996@0.23.1920.996" timestamp="1580068996741" />
+    <state width="1535" height="213" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580077610044" />
+    <state width="1535" height="327" key="GridCell.Tab.1.bottom" timestamp="1580058825728">
+      <screen x="0" y="23" width="1920" height="994" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
@@ -447,8 +485,10 @@
     <state width="1417" height="191" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1577968981754" />
     <state width="765" height="220" key="GridCell.Tab.1.bottom/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704942" />
     <state width="765" height="220" key="GridCell.Tab.1.bottom/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
-    <state width="765" height="220" key="GridCell.Tab.1.center" timestamp="1579972124076">
-      <screen x="0" y="23" width="1920" height="993" />
+    <state width="1535" height="327" key="GridCell.Tab.1.bottom/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580058825728" />
+    <state width="1535" height="328" key="GridCell.Tab.1.bottom/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580048591321" />
+    <state width="1535" height="327" key="GridCell.Tab.1.center" timestamp="1580058825727">
+      <screen x="0" y="23" width="1920" height="994" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
@@ -465,8 +505,10 @@
     <state width="1417" height="191" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1577968981753" />
     <state width="765" height="220" key="GridCell.Tab.1.center/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704941" />
     <state width="765" height="220" key="GridCell.Tab.1.center/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
-    <state width="765" height="220" key="GridCell.Tab.1.left" timestamp="1579972124076">
-      <screen x="0" y="23" width="1920" height="993" />
+    <state width="1535" height="327" key="GridCell.Tab.1.center/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580058825727" />
+    <state width="1535" height="328" key="GridCell.Tab.1.center/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580048591320" />
+    <state width="1535" height="327" key="GridCell.Tab.1.left" timestamp="1580058825727">
+      <screen x="0" y="23" width="1920" height="994" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
@@ -483,8 +525,10 @@
     <state width="1417" height="191" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1577968981753" />
     <state width="765" height="220" key="GridCell.Tab.1.left/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704941" />
     <state width="765" height="220" key="GridCell.Tab.1.left/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
-    <state width="765" height="220" key="GridCell.Tab.1.right" timestamp="1579972124076">
-      <screen x="0" y="23" width="1920" height="993" />
+    <state width="1535" height="327" key="GridCell.Tab.1.left/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580058825727" />
+    <state width="1535" height="328" key="GridCell.Tab.1.left/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580048591320" />
+    <state width="1535" height="327" key="GridCell.Tab.1.right" timestamp="1580058825728">
+      <screen x="0" y="23" width="1920" height="994" />
     </state>
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
@@ -501,6 +545,8 @@
     <state width="1417" height="191" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1577968981753" />
     <state width="765" height="220" key="GridCell.Tab.1.right/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704941" />
     <state width="765" height="220" key="GridCell.Tab.1.right/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
+    <state width="1535" height="327" key="GridCell.Tab.1.right/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580058825728" />
+    <state width="1535" height="328" key="GridCell.Tab.1.right/1920.86.1440.877/0.23.1920.997@0.23.1920.997" timestamp="1580048591320" />
     <state x="289" y="36" key="SettingsEditor" timestamp="1579954377598">
       <screen x="0" y="23" width="1920" height="993" />
     </state>
@@ -528,6 +574,10 @@
     <state x="348" y="227" key="com.intellij.ide.util.TipDialog/0.23.1280.732@0.23.1280.732" timestamp="1579373376198" />
     <state x="392" y="253" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1577150014355" />
     <state x="392" y="253" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1577283262011" />
+    <state x="352" y="263" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1580058653930">
+      <screen x="0" y="23" width="1920" height="994" />
+    </state>
+    <state x="352" y="263" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.86.1440.877/0.23.1920.994@0.23.1920.994" timestamp="1580058653930" />
     <state x="387" y="56" width="683" height="714" key="find.popup" timestamp="1577433897902">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
@@ -562,11 +612,6 @@
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/breakout_ram/train_breakout_ram_ddpg_agent.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/bipedal_walker/train_bipedal_walker_agent.py</url>
           <line>71</line>
           <option name="timeStamp" value="88" />
@@ -575,6 +620,16 @@
           <url>file://$PROJECT_DIR$/acrobot/train_acrobot_agent_ddpg.py</url>
           <line>64</line>
           <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/breakout_ram/train_breakout_ram_agent.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/breakout_ram/train_breakout_Q_multi.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
