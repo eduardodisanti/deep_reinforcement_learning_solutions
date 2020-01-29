@@ -17,16 +17,16 @@ pool = Pool(cpus)
 ### neural network
 
 # hyperparameters
-ENVIRONMENT = 'LunarLander-v2'
+ENVIRONMENT = 'BipedalWalker-v2'
 env = gym.make(ENVIRONMENT)
 D = len(env.reset())
-M = 64
-K = env.action_space.n
-action_max = env.action_space.n
+M = 1200
+K = env.action_space.shape[0]
+action_max = env.action_space.high
 
 def save_model_params(NN, rewards, generations):
 
-    with open("lunar_lander_ne_300x300.h5", "wb") as f:
+    with open("bipedal_walker_ne_300.h5", "wb") as f:
         pickle.dump({'model':NN, 'reward':rewards, 'episodes':generations}, f)
 
 def evolution_strategy(
@@ -35,6 +35,7 @@ def evolution_strategy(
         sigma,
         lr,
         initial_params,
+        generations,
         target_score=200,
         target_episodes=10):
     # assume initial params is a 1-D array
@@ -101,7 +102,7 @@ def reward_function(params, display=False):
         action = model.sample_action(state)
 
         # perform the action
-        action = np.argmax(action)
+        #action = np.argmax(action)
         state, reward, done, _ = env.step(action)
 
         # update total reward
@@ -114,19 +115,21 @@ def get_NN():
     return(model)
 
 if __name__ == '__main__':
+    generations = 300
     model = ANN(D, M, K, action_max)
 
     model.init()
     params = model.get_params()
     best_params, rewards = evolution_strategy(
         f=reward_function,
-        population_size=100,
+        population_size=30,
         sigma=0.1,
         lr=0.03,
         initial_params=params,
-        target_score = 200,
-        target_episodes = 100
+        generations=generations,
+        target_score = 100,
+        target_episodes = 10
     )
 
     model.set_params(best_params)
-    save_model_params(model, rewards, len(rewards))
+    save_model_params(model, rewards, generations)

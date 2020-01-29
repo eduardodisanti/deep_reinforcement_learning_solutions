@@ -3,7 +3,7 @@ import pickle
 import gym
 from models.ANN import ANN
 
-with open("lunar_lander_ne_300.h5", "rb") as f:
+with open("lunar_lander_ne_300x300.h5", "rb") as f:
     M = pickle.load(f)
 
 model = M['model']
