@@ -132,7 +132,7 @@ if __name__ == '__main__':
         lr=0.03,
         initial_params=params,
         generations=generations,
-        target_score = 200,
+        target_score = 260,
         target_episodes = 10
     )
 
