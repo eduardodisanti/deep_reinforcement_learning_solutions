@@ -8,7 +8,7 @@ from datetime import datetime
 from multiprocessing.dummy import Pool
 
 # thread pool for parallelization
-from models.ANN import ANN
+from models.ANN import ANN2
 
 cpus = os.cpu_count()
 print("CPUS", cpus)
@@ -20,13 +20,14 @@ pool = Pool(cpus)
 ENVIRONMENT = 'LunarLander-v2'
 env = gym.make(ENVIRONMENT)
 D = len(env.reset())
-M = 64
+M1 = 32
+M2 = 64
 K = env.action_space.n
 action_max = env.action_space.n
 
 def save_model_params(NN, rewards, generations):
 
-    with open("lunar_lander_ne_300x300.h5", "wb") as f:
+    with open("lunar_lander_ne_64x24.h5", "wb") as f:
         pickle.dump({'model':NN, 'reward':rewards, 'episodes':generations}, f)
 
 def evolution_strategy(
@@ -86,7 +87,7 @@ def evolution_strategy(
 
 
 def reward_function(params, display=False):
-    model = ANN(D, M, K, action_max)
+    model = ANN2(D, M1, M2, K, action_max)
     model.set_params(params)
 
     env = gym.make(ENVIRONMENT)
@@ -114,7 +115,7 @@ def get_NN():
     return(model)
 
 if __name__ == '__main__':
-    model = ANN(D, M, K, action_max)
+    model = ANN2(D, M1, M2, K, action_max)
 
     model.init()
     params = model.get_params()

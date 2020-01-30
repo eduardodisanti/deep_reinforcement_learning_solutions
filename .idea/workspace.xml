@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77b0b109-db52-4a72-956b-b736fe2ffa36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bipedal_walker/bipedal_walker_neural_evolution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander_ne_300x300.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/try_ANN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander_ne_300.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bipedal_walker/bipedal_walker_neural_evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/bipedal_walker/bipedal_walker_neural_evolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander_ne_300x300.h5" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander_ne_300x300.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lunar_lander/lunar_lander_neural_evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/lunar_lander_neural_evolution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lunar_lander/play_lunar_lander_neural_evolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/lunar_lander/play_lunar_lander_neural_evolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ANN.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ANN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,11 @@
     <option name="ONTO" value="refs/heads/master" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="FOR" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VO952I5kSvNP9YQ3fDRCetQWMa" />
@@ -117,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="smart_lunar_lander_agent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="try_ANN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,11 +130,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lunar_lander" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lunar_lander/smart_lunar_lander_agent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/try_ANN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,34 +143,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_lunar_lander_agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in try_ANN.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="deep_reinforcement_learning_solutions" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/anaconda3/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lunar_lander" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lunar_lander/train_lunar_lander_agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/models/try_ANN.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.lunar_lander_neural_evolution" />
         <item itemvalue="Python.bipedal_walker_neural_evolution" />
+        <item itemvalue="Python.try_ANN" />
+        <item itemvalue="Python tests.pytest in try_ANN.py" />
         <item itemvalue="Python.play_lunar_lander_neural_evolution" />
-        <item itemvalue="Python.train_lunar_lander_agent" />
-        <item itemvalue="Python.smart_lunar_lander_agent" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580295982965</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="MINOR TWEAKS ON ES&#10;ADD BIPEDAL ES TRAINING">
+      <created>1580323428373</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580323428373</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,7 +312,8 @@
     <MESSAGE value="RENAME A2C agent" />
     <MESSAGE value="ADD DDPG AGENT AND USE ON BIPEDAL WALKER" />
     <MESSAGE value="IMPLEMENT NEURAL EVOLUTION POR LUNAR LANDER" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENT NEURAL EVOLUTION POR LUNAR LANDER" />
+    <MESSAGE value="MINOR TWEAKS ON ES&#10;ADD BIPEDAL ES TRAINING" />
+    <option name="LAST_COMMIT_MESSAGE" value="MINOR TWEAKS ON ES&#10;ADD BIPEDAL ES TRAINING" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2592" y="292" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580218602725">
@@ -321,10 +328,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2573" y="169" key="#train_lunar_lander_agent/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580132389980" />
-    <state x="2003" y="31" key="CommitChangelistDialog2" timestamp="1580295982861">
+    <state x="2555" y="164" key="CommitChangelistDialog2" timestamp="1580402808043">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2003" y="31" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580295982861" />
+    <state x="2555" y="164" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580402808043" />
     <state x="55" y="23" key="CommitChangelistDialog2/0.23.1280.732@0.23.1280.732" timestamp="1579373829245" />
     <state x="55" y="23" key="CommitChangelistDialog2/0.23.1280.736@0.23.1280.736" timestamp="1579543997663" />
     <state x="315" y="24" key="CommitChangelistDialog2/0.23.1440.817@0.23.1440.817" timestamp="1577113218456" />
@@ -346,11 +353,11 @@
     <state width="908" height="467" key="DebuggerActiveHint/0.23.1440.827@0.23.1440.827" timestamp="1577534095170" />
     <state width="694" height="466" key="DebuggerActiveHint/0.23.1440.828@0.23.1440.828" timestamp="1577279869330" />
     <state width="1211" height="561" key="DebuggerActiveHint/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579969216698" />
-    <state width="1334" height="158" key="GridCell.Tab.0.bottom" timestamp="1580321894417">
+    <state width="1649" height="262" key="GridCell.Tab.0.bottom" timestamp="1580402767205">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1334" height="158" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580321894417" />
-    <state width="1334" height="158" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580320858426" />
+    <state width="1649" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580402767205" />
+    <state width="1649" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580402452057" />
     <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1579374141120" />
     <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.23.1280.734@0.23.1280.734" timestamp="1579375434360" />
     <state width="1239" height="162" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1579431711217" />
@@ -378,11 +385,11 @@
     <state width="986" height="185" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715285" />
     <state width="885" height="191" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362030" />
     <state width="885" height="191" key="GridCell.Tab.0.bottom/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003321" />
-    <state width="1334" height="158" key="GridCell.Tab.0.center" timestamp="1580321894417">
+    <state width="1649" height="262" key="GridCell.Tab.0.center" timestamp="1580402767205">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1334" height="158" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580321894417" />
-    <state width="1334" height="158" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580320858426" />
+    <state width="1649" height="262" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580402767205" />
+    <state width="1649" height="262" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580402452057" />
     <state width="1239" height="162" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1579374141117" />
     <state width="1239" height="162" key="GridCell.Tab.0.center/0.23.1280.734@0.23.1280.734" timestamp="1579375434358" />
     <state width="1239" height="162" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1579431711216" />
@@ -410,11 +417,11 @@
     <state width="986" height="185" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715284" />
     <state width="885" height="191" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362029" />
     <state width="885" height="191" key="GridCell.Tab.0.center/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003321" />
-    <state width="1334" height="158" key="GridCell.Tab.0.left" timestamp="1580321894417">
+    <state width="1649" height="262" key="GridCell.Tab.0.left" timestamp="1580402767204">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1334" height="158" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580321894417" />
-    <state width="1334" height="158" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580320858426" />
+    <state width="1649" height="262" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580402767204" />
+    <state width="1649" height="262" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580402452057" />
     <state width="1239" height="162" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1579374141115" />
     <state width="1239" height="162" key="GridCell.Tab.0.left/0.23.1280.734@0.23.1280.734" timestamp="1579375434358" />
     <state width="1239" height="162" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1579431711215" />
@@ -442,11 +449,11 @@
     <state width="986" height="185" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715284" />
     <state width="885" height="191" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362029" />
     <state width="885" height="191" key="GridCell.Tab.0.left/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003320" />
-    <state width="1334" height="158" key="GridCell.Tab.0.right" timestamp="1580321894417">
+    <state width="1649" height="262" key="GridCell.Tab.0.right" timestamp="1580402767205">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1334" height="158" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580321894417" />
-    <state width="1334" height="158" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580320858426" />
+    <state width="1649" height="262" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1580402767205" />
+    <state width="1649" height="262" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580402452057" />
     <state width="1239" height="162" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1579374141119" />
     <state width="1239" height="162" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1579375434359" />
     <state width="1239" height="162" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1579431711217" />
@@ -474,10 +481,10 @@
     <state width="986" height="185" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579976715285" />
     <state width="885" height="191" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.993@1920.86.1440.877" timestamp="1579724362030" />
     <state width="885" height="191" key="GridCell.Tab.0.right/1920.86.1440.877/0.23.1920.994@1920.86.1440.877" timestamp="1579725003321" />
-    <state width="789" height="273" key="GridCell.Tab.1.bottom" timestamp="1580308211984">
+    <state width="1340" height="347" key="GridCell.Tab.1.bottom" timestamp="1580394370257">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="789" height="273" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580308211984" />
+    <state width="1340" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580394370257" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1577384355447" />
@@ -493,10 +500,10 @@
     <state width="1417" height="191" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1577968981754" />
     <state width="765" height="220" key="GridCell.Tab.1.bottom/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704942" />
     <state width="765" height="220" key="GridCell.Tab.1.bottom/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
-    <state width="789" height="273" key="GridCell.Tab.1.center" timestamp="1580308211984">
+    <state width="1340" height="347" key="GridCell.Tab.1.center" timestamp="1580394370257">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="789" height="273" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580308211984" />
+    <state width="1340" height="347" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580394370257" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1577384355446" />
@@ -512,10 +519,10 @@
     <state width="1417" height="191" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1577968981753" />
     <state width="765" height="220" key="GridCell.Tab.1.center/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704941" />
     <state width="765" height="220" key="GridCell.Tab.1.center/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
-    <state width="789" height="273" key="GridCell.Tab.1.left" timestamp="1580308211984">
+    <state width="1340" height="347" key="GridCell.Tab.1.left" timestamp="1580394370257">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="789" height="273" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580308211984" />
+    <state width="1340" height="347" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580394370257" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1577384355446" />
@@ -531,10 +538,10 @@
     <state width="1417" height="191" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1577968981753" />
     <state width="765" height="220" key="GridCell.Tab.1.left/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579971704941" />
     <state width="765" height="220" key="GridCell.Tab.1.left/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579972124076" />
-    <state width="789" height="273" key="GridCell.Tab.1.right" timestamp="1580308211984">
+    <state width="1340" height="347" key="GridCell.Tab.1.right" timestamp="1580394370257">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="789" height="273" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580308211984" />
+    <state width="1340" height="347" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580394370257" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.815@0.23.1440.815" timestamp="1577389437277" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.817@0.23.1440.817" timestamp="1577387971075" />
     <state width="1402" height="190" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1577384355446" />
@@ -563,10 +570,10 @@
     <state x="217" y="60" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1577282129348" />
     <state x="289" y="36" key="SettingsEditor/1920.86.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1579954333510" />
     <state x="289" y="36" key="SettingsEditor/1920.86.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579954377598" />
-    <state x="1920" y="31" key="Vcs.Push.Dialog.v2" timestamp="1580296115399">
+    <state x="1920" y="31" key="Vcs.Push.Dialog.v2" timestamp="1580323431244">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="1920" y="31" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580296115399" />
+    <state x="1920" y="31" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580323431244" />
     <state x="315" y="161" key="Vcs.Push.Dialog.v2/0.23.1440.817@0.23.1440.817" timestamp="1577113223505" />
     <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1577315677285" />
     <state x="315" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1577523591017" />

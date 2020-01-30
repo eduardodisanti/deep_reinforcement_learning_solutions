@@ -8,7 +8,7 @@ from datetime import datetime
 from multiprocessing.dummy import Pool
 
 # thread pool for parallelization
-from models.ANN import ANN
+from models.ANN import ANN2
 
 cpus = os.cpu_count()
 print("CPUS", cpus)
@@ -20,7 +20,8 @@ pool = Pool(cpus)
 ENVIRONMENT = 'BipedalWalker-v2'
 env = gym.make(ENVIRONMENT)
 D = len(env.reset())
-M = 1200
+M1 = 128
+M2 = 24
 K = env.action_space.shape[0]
 action_max = env.action_space.high
 
@@ -87,7 +88,7 @@ def evolution_strategy(
 
 
 def reward_function(params, display=False):
-    model = ANN(D, M, K, action_max)
+    model = ANN2(D, M1, M2, K, action_max)
     model.set_params(params)
 
     env = gym.make(ENVIRONMENT)
@@ -116,7 +117,7 @@ def get_NN():
 
 if __name__ == '__main__':
     generations = 300
-    model = ANN(D, M, K, action_max)
+    model = ANN2(D, M1, M2, K, action_max)
 
     model.init()
     params = model.get_params()
