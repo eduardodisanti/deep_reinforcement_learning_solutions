@@ -20,14 +20,14 @@ pool = Pool(cpus)
 ENVIRONMENT = 'BipedalWalker-v2'
 env = gym.make(ENVIRONMENT)
 D = len(env.reset())
-M1 = 128
-M2 = 24
+M1 = 256
+M2 = 64
 K = env.action_space.shape[0]
 action_max = env.action_space.high
 
 def save_model_params(NN, rewards, generations):
 
-    with open("bipedal_walker_ne_300.h5", "wb") as f:
+    with open("bipedal_walker_ne_200.h5", "wb") as f:
         pickle.dump({'model':NN, 'reward':rewards, 'episodes':generations}, f)
 
 def evolution_strategy(
@@ -128,7 +128,7 @@ if __name__ == '__main__':
         lr=0.03,
         initial_params=params,
         generations=generations,
-        target_score = 100,
+        target_score = 200,
         target_episodes = 10
     )
 
