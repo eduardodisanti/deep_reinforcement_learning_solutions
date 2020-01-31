@@ -3,7 +3,7 @@ import pickle
 import gym
 from models.ANN import ANN2
 
-with open("bipedal_walker_ne_200_128X24.h5", "rb") as f:
+with open("bipedal_walker_ne_200_64X16.h5", "rb") as f:
     M = pickle.load(f)
 
 model = M['model']
