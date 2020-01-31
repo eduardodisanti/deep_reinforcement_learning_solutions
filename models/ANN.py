@@ -31,11 +31,9 @@ class ANN2:
         return Z3
 
     def sample_action(self, x):
-        # assume input is a single state of size (D,)
-        # first make it (N, D) to fit ML conventions
         X = np.atleast_2d(x)
         Y = self.forward(X)
-        return Y[0]  # the first row
+        return Y[0]
 
     def get_params(self):
         # return a flat array of parameters

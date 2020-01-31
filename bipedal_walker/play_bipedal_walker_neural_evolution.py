@@ -3,10 +3,14 @@ import pickle
 import gym
 from models.ANN import ANN2
 
-with open("bipedal_walker_ne_200.h5", "rb") as f:
+with open("bipedal_walker_ne_200_128X24.h5", "rb") as f:
     M = pickle.load(f)
 
 model = M['model']
+rew = M['reward']
+eps = M['episodes']
+
+print("episodes", eps, "res avg", np.average(rew))
 
 ENVIRONMENT = 'BipedalWalker-v2'
 env = gym.make(ENVIRONMENT)
