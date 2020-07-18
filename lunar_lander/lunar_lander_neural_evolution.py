@@ -20,7 +20,7 @@ pool = Pool(cpus)
 ENVIRONMENT = 'LunarLander-v2'
 env = gym.make(ENVIRONMENT)
 env.reset()
-D = len(env.action_space)
+D = env.observation_space.shape[0]
 M1 = 32
 M2 = 64
 K = env.action_space.n

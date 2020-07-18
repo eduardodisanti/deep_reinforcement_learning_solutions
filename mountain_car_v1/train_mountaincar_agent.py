@@ -78,7 +78,7 @@ while not trained:
         plt.pause(0.1)
         print("act", la)
         print("episodes", episodes, "last score", score, "current eps", eps, "solved", times_solved, "avg", avg)
-        torch.save(agent.qnetwork_local.state_dict(), 'mountain_car_v0_chk.pt')
+        torch.save(agent.qnetwork_local.state_dict(), 'mountain_car_v0.pt')
 
     if avg > TARGET_AVG_SCORE:
         times_solved += 1

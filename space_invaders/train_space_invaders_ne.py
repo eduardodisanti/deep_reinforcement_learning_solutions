@@ -8,35 +8,27 @@ from datetime import datetime
 from multiprocessing.dummy import Pool
 
 # thread pool for parallelization
-from env_wrappers.atari_wrappers import make_atari, wrap_deepmindRAM, Monitor
-from models.ANN import ANN
+from models.ANN import ANN2
 
 cpus = os.cpu_count()
 print("CPUS", cpus)
-pool = Pool(cpus)
+pool = Pool(int(cpus/4))
 
 ### neural network
 
 # hyperparameters
-ENVIRONMENT = 'Breakout-ram-v0'
-
-env = make_atari(ENVIRONMENT, skip=4)
-env = wrap_deepmindRAM(env, frame_stack=False, clip_rewards=True, episode_life=True)
-env = Monitor(env)
-
+ENVIRONMENT = 'SpaceInvaders-ram-v0'
+env = gym.make(ENVIRONMENT)
 env.reset()
-
-action_size = env.action_space.n
-
-state_size = env.observation_space.shape[0]
-D = state_size
-M1 = 1024
+D = env.observation_space.shape[0]
+M1 = 64
+M2 = 16
 K = env.action_space.n
 action_max = env.action_space.n
 
 def save_model_params(NN, rewards, generations):
 
-    with open("breakout_ne_64x24.h5", "wb") as f:
+    with open("SpaceInvaders-32x64.h5", "wb") as f:
         pickle.dump({'model':NN, 'reward':rewards, 'episodes':generations}, f)
 
 def evolution_strategy(
@@ -45,7 +37,7 @@ def evolution_strategy(
         sigma,
         lr,
         initial_params,
-        target_score=200,
+        target_score=500,
         target_episodes=10):
     # assume initial params is a 1-D array
     num_params = len(initial_params)
@@ -96,19 +88,16 @@ def evolution_strategy(
 
 
 def reward_function(params, display=False):
-    model = ANN(D, M1, K, action_max)
+    model = ANN2(D, M1, M2, K, action_max)
     model.set_params(params)
+
+    env = gym.make(ENVIRONMENT)
 
     # play one episode and return the total reward
     episode_reward = 0
     episode_length = 0  # not sure if it will be used
     done = False
-    env = make_atari(ENVIRONMENT, skip=4)
-    env = wrap_deepmindRAM(env, frame_stack=False, clip_rewards=True, episode_life=True)
-    env = Monitor(env)
     state = env.reset()
-
-    lives = env.episodic_env.lives
     while not done:
         # get the action
         action = model.sample_action(state)
@@ -116,9 +105,6 @@ def reward_function(params, display=False):
         # perform the action
         action = np.argmax(action)
         state, reward, done, _ = env.step(action)
-        if env.episodic_env.lives < lives:
-            lives = env.episodic_env.lives
-            reward-=1
 
         # update total reward
         episode_reward += reward
@@ -130,7 +116,7 @@ def get_NN():
     return(model)
 
 if __name__ == '__main__':
-    model = ANN(D, M1,K, action_max)
+    model = ANN2(D, M1, M2, K, action_max)
 
     model.init()
     params = model.get_params()

@@ -25,13 +25,13 @@ LR = 5e-3  # learning rate
 UPDATE_EVERY = 4  # how often to update the network
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=1, gamma=GAMMA, buffer_size=BUFFER_SIZE,
-              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=64, fc2_neurons=64)
+              batch_size=BATCH_SIZE, tau=TAU, lr=LR, update_every=UPDATE_EVERY, fc1_neurons=32, fc2_neurons=32)
 
 TARGET_AVG_SCORE = -99
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
 eps_min = 0.001  # EVEN EXPLORE AFTER MANY EPISODES
-eps_decay = 0.999995  # DECAY EXPLORE SLOWLY
+eps_decay = 0.99995  # DECAY EXPLORE SLOWLY
 best_score = -1e10
 
 trained = False
@@ -47,14 +47,14 @@ mavgs = []
 
 scores = []
 SHOW_TRAIN = 50
-train_show_window = 50
+train_show_window = 10
 
 eps = EPS_START
 
 if os.path.isfile('acrobot.pt'):
     agent.load_model('acrobot.pt')
     episodes = SHOW_TRAIN
-    best_score = -95.89
+    best_score = -10e10
     eps = 0.001
 
 while not trained:
@@ -98,7 +98,7 @@ while not trained:
         times_solved += 1
     else:
         consecutives_solved = 0
-    if avg > TARGET_AVG_SCORE and len(lq) > 10000:
+    if avg > TARGET_AVG_SCORE and len(lq) > 100:
         trained = True
         if avg > best_score:
             torch.save(agent.qnetwork_local.state_dict(), 'acrobot.pt')

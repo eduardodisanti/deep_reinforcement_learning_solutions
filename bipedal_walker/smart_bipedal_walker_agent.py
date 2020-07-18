@@ -1,7 +1,7 @@
 import gym
 import numpy as np
 
-from models.a3c_agent import Agent
+from models.a3c_agent import ActorCriticAgent
 
 env = gym.make('BipedalWalker-v2')
 env.reset()
@@ -15,7 +15,7 @@ def choose_action(state, agent):
 
     return action
 
-agent = Agent(state_size=state_size, action_size=action_size, random_seed=1)
+agent = ActorCriticAgent(state_size=state_size, action_size=action_size, random_seed=1)
 
 
 agent.load_model("bipedal_actor.pt", "bipedal_critic.pt")

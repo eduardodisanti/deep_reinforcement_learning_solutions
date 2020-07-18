@@ -1,0 +1,6 @@
+
+vpython:S117^"_Rename this local variable "Q_targets_next" to match the regular expression ^[_a-z][a-z0-9_]*$.(µÒßù
+Gpython:S1066<"/Merge this if statement with the enclosing one.(≥ßë 
+wpython:S117c"[Rename this local variable "Q_expected" to match the regular expression ^[_a-z][a-z0-9_]*$.(öÔ“€¸ˇˇˇˇ
+vpython:S117`"ZRename this local variable "Q_targets" to match the regular expression ^[_a-z][a-z0-9_]*$.(¶¬∏˝ˇˇˇˇ
+cpython:S107"LMethod "__init__" has 12 parameters, which is greater than the 7 authorized.(Ô¢Ñã

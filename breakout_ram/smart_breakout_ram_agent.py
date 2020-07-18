@@ -13,7 +13,7 @@ score = 0
 action_size = env.action_space.n
 state_size = env.observation_space.shape[0]
 
-agent = Agent(state_size=state_size, action_size=action_size, fc2_neurons=512, fc1_neurons=512)
+agent = Agent(state_size=state_size, action_size=action_size, fc2_neurons=1024, fc1_neurons=1024)
 
 agent.load_model("breakout_ram.pt")
 

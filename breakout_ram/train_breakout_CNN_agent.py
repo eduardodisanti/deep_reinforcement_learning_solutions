@@ -8,19 +8,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from env_wrappers.atari_wrappers import make_atari, Monitor, wrap_deepmindRAM
+from models.CNN import CNN
 from models.dqn_agent import Agent
 from auxs.aux_funcs import create_action_dict, choose_action
 
-env = make_atari('Breakout-ram-v0', skip=4)
+env = make_atari('Breakout-v0', skip=4)
 env = wrap_deepmindRAM(env, frame_stack=False, clip_rewards=True, episode_life=True)
 env = Monitor(env)
 
 env.reset()
 
 action_size = env.action_space.n
-state_size = env.observation_space.shape[0]
+_state_size = env.observation_space.shape
 
-print("state size", state_size)
+print("state size", _state_size)
+state_size = _state_size[0] * _state_size[1] * _state_size[2]
+
+cnn = CNN()
 
 EPS_START = 1           # START EXPLORING A LOT
 GAMMA = 0.1             # discount factor -
@@ -39,7 +43,7 @@ agent = Agent(state_size=state_size, action_size=action_size, seed=0, gamma=GAMM
 TARGET_AVG_SCORE = 10
 NUM_OF_TARGET_EPISODES_FOR_AVG = 100
 
-SHOW_TRAIN = 10000
+SHOW_TRAIN = 100000
 trained = False
 episodes = 0
 la = create_action_dict(action_size)
@@ -61,21 +65,20 @@ episode_eps_min = None
 
 while not trained:
     state = env.reset()  # reset the environment
-    ticks = 0
     score = 0  # initialize the score
     lives_ant = env.episodic_env.lives
     while True:
-        if episodes >= SHOW_TRAIN:
-            env.render()
+        img = env.render(mode='rgb_array')
+        tensor_img = torch.tensor(img)
+        cnn.forward(tensor_img)
         if eps <= eps_min and episode_eps_min == None:
             episode_eps_min = episodes
-        if ticks == 1:
-            action = choose_action(state, agent, eps)  # select an action
-            la[action] += 1
-        else:
-            action = 0
-
+        action = choose_action(state, agent, eps)  # select an action
+        la[action] += 1
         next_state, reward, done, info = env.step(action)
+        if lives_ant > env.episodic_env.lives:
+            reward -= 1
+            lives_ant = env.episodic_env.lives
 
         score+=reward
         if done:
@@ -103,14 +106,14 @@ while not trained:
         print("act", la)
         print("episodes", episodes, "last score", score, "current eps", eps, "avg", avg)
         if avg > max_score:
-            torch.save(agent.qnetwork_local.state_dict(), 'breakout_ram.pt')
+            torch.save(agent.qnetwork_local.state_dict(), 'breakout_cnn.pt')
             max_score = avg
 
     if (avg > TARGET_AVG_SCORE and episodes > NUM_OF_TARGET_EPISODES_FOR_AVG) or episodes > 100000000:
         trained = True
-        torch.save(agent.qnetwork_local.state_dict(), 'breakout_ram.pt')
+        torch.save(agent.qnetwork_local.state_dict(), 'breakout_cnn.pt')
         print("Trained")
         print("episodes", episodes, "last score", score, "current eps", eps,  "avg", avg)
 
-plt.savefig("breakout_ram_train_history.png")
+plt.savefig("breakout_cnn_train_history.png")
 print("Score: {}".format(score))

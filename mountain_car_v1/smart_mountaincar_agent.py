@@ -2,7 +2,7 @@ import gym
 import random
 import torch
 
-from mountain_car_v1.dqn_mountaincar_agent import Agent
+from models.dqn_agent import Agent
 
 env = gym.make('MountainCar-v0')
 env.reset()
@@ -14,7 +14,7 @@ def choose_action(state, agent, eps=0.):
 
     return action
 
-agent = Agent()
+agent = Agent(fc1_neurons=200, fc2_neurons=200)
 
 agent.load_model("mountain_car_v0.pt")
 
