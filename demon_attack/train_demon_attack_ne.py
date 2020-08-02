@@ -12,12 +12,13 @@ from models.ANN import ANN2
 
 cpus = os.cpu_count()
 print("CPUS", cpus)
-pool = Pool(int(1))
+pool = Pool(int(cpus))
+pool = Pool(1)
 
 ### neural network
 
 # hyperparameters
-ENVIRONMENT = 'SpaceInvaders-ram-v0'
+ENVIRONMENT = 'DemonAttack-ram-v0'
 env = gym.make(ENVIRONMENT)
 env.reset()
 D = env.observation_space.shape[0]
@@ -28,7 +29,7 @@ action_max = env.action_space.n
 
 def save_model_params(NN, rewards, generations):
 
-    with open("SpaceInvaders-32x64.h5", "wb") as f:
+    with open("DemonAttack-32x64.h5", "wb") as f:
         pickle.dump({'model':NN, 'reward':rewards, 'episodes':generations}, f)
 
 def evolution_strategy(
@@ -37,7 +38,7 @@ def evolution_strategy(
         sigma,
         lr,
         initial_params,
-        target_score=500,
+        target_score=1820,
         target_episodes=10):
     # assume initial params is a 1-D array
     num_params = len(initial_params)
@@ -126,7 +127,7 @@ if __name__ == '__main__':
         sigma=0.1,
         lr=0.03,
         initial_params=params,
-        target_score = 1500,
+        target_score = 5000,
         target_episodes = 10
     )
 
