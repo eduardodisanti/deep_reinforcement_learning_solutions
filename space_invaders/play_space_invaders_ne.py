@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 import gym
-from models.ANN import ANN
+from models.ANN import ANN2, relu
 
 with open("SpaceInvaders-32x64.h5", "rb") as f:
     M = pickle.load(f)

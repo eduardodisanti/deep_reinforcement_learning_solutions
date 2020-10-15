@@ -1,12 +1,12 @@
 
+ipython:S117"MRename this parameter "D" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
+;python:S125J"Remove this commented out code.(ÂãŸÆøÿÿÿÿ
+;python:S125M"Remove this commented out code.(·–ıÿÿÿÿ
+ipython:S117"MRename this parameter "K" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
+ipython:S117P"MRename this parameter "X" to match the regular expression ^[_a-z][a-z0-9_]*$.(’Õôœÿÿÿÿÿ
 ipython:S117"MRename this parameter "X" to match the regular expression ^[_a-z][a-z0-9_]*$.(’Õôœÿÿÿÿÿ
-jpython:S117"NRename this parameter "M1" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
 dpython:S117@"MRename this parameter "M" to match the regular expression ^[_a-z][a-z0-9_]*$.(……ä
 dpython:S117@"MRename this parameter "K" to match the regular expression ^[_a-z][a-z0-9_]*$.(……ä
 dpython:S117@"MRename this parameter "D" to match the regular expression ^[_a-z][a-z0-9_]*$.(……ä
-;python:S125M"Remove this commented out code.(·–ıÿÿÿÿ
 jpython:S117"NRename this parameter "M2" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
-;python:S125J"Remove this commented out code.(ÂãŸÆøÿÿÿÿ
-ipython:S117"MRename this parameter "D" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
-ipython:S117"MRename this parameter "K" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
-ipython:S117P"MRename this parameter "X" to match the regular expression ^[_a-z][a-z0-9_]*$.(’Õôœÿÿÿÿÿ
+jpython:S117"NRename this parameter "M1" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê•–øÿÿÿÿ
